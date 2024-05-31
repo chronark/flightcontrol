@@ -20,7 +20,7 @@
           "buildType": "docker",
           "cpu": 1,
           "gpu": 0,
-          "memory": 2,
+          "memory": 1,
           "containerInsights": true,
           "minInstances": 1,
           "maxInstances": 2,
