@@ -1,0 +1,48 @@
+{
+  "$schema": "https://app.flightcontrol.dev/schema.json",
+  "environments": [
+    {
+      "id": "production",
+      "name": "Production",
+      "region": "eu-central-1",
+      "source": {
+        "branch": "main",
+        "pr": false,
+        "trigger": "push"
+      },
+      "services": [
+        {
+          "id": "web-server",
+          "name": "Web server",
+          "target": {
+            "type": "fargate"
+          },
+          "buildType": "docker",
+          "cpu": 1,
+          "gpu": 0,
+          "memory": 2,
+          "containerInsights": true,
+          "minInstances": 1,
+          "maxInstances": 2,
+          "versionHistoryCount": 10,
+          "basePath": ".",
+          "dockerfilePath": "Dockerfile",
+          "dockerContext": ".",
+          "envVariables": {},
+          "autoscaling": {
+            "cpuThreshold": 70,
+            "memoryThreshold": 70,
+            "cooldownTimerSecs": 300,
+            "requestsPerTarget": 500
+          },
+          "includeEnvVariablesInBuild": true,
+          "healthCheckGracePeriodSecs": 5,
+          "healthCheckPath": "/v1/liveness",
+          "port": 8080,
+          "enableCloudfrontSwr": false,
+          "type": "web"
+        }
+      ]
+    }
+  ]
+}
