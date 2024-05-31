@@ -16,11 +16,6 @@ var (
 	port = env.String("PORT", "8080")
 )
 
-type event struct {
-	datasource string
-	row        any
-}
-
 func main() {
 
 	logConfig := &logging.Config{
@@ -31,6 +26,7 @@ func main() {
 	logger := logging.New(logConfig)
 
 	http.HandleFunc("/v1/liveness", func(w http.ResponseWriter, r *http.Request) {
+		logger.Info().Str("path", r.URL.Path).Str("userAgent", r.UserAgent()).Msg("Liveness check")
 		_, err := w.Write([]byte(fmt.Sprintf("%d", time.Now().UnixMilli())))
 		if err != nil {
 
