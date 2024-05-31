@@ -28,7 +28,9 @@
           "basePath": ".",
           "dockerfilePath": "Dockerfile",
           "dockerContext": ".",
-          "envVariables": {},
+          "envVariables": {
+            "PORT": 8080
+          },
           "autoscaling": {
             "cpuThreshold": 70,
             "memoryThreshold": 70,
