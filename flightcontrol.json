@@ -92,6 +92,141 @@
       ]
     },
     {
+      "id": "sa-east-1",
+      "name": "sa-east-1",
+      "region": "sa-east-1",
+      "source": {
+        "branch": "main",
+        "pr": false,
+        "trigger": "push"
+      },
+      "services": [
+        {
+          "id": "api",
+          "name": "API",
+          "target": {
+            "type": "ecs-ec2",
+            "clusterInstanceSize": "t3a.small",
+            "clusterMinInstances": 1,
+            "clusterMaxInstances": 4
+          },
+          "buildType": "docker",
+          "cpu": 1,
+          "gpu": 0,
+          "memory": 1,
+          "containerInsights": false,
+          "minInstances": 1,
+          "maxInstances": 8,
+          "versionHistoryCount": 10,
+          "basePath": ".",
+          "dockerfilePath": "Dockerfile",
+          "dockerContext": ".",
+          "envVariables": {},
+          "autoscaling": {
+            "cpuThreshold": 70,
+            "memoryThreshold": 70,
+            "cooldownTimerSecs": 300,
+            "requestsPerTarget": 500
+          },
+          "includeEnvVariablesInBuild": true,
+          "healthCheckPath": "/v1/liveness",
+          "port": 8080,
+          "enableCloudfrontSwr": false,
+          "type": "web"
+        }
+      ]
+    },
+    {
+      "id": "ap-southeast-2",
+      "name": "ap-southeast-2",
+      "region": "ap-southeast-2",
+      "source": {
+        "branch": "main",
+        "pr": false,
+        "trigger": "push"
+      },
+      "services": [
+        {
+          "id": "api",
+          "name": "API",
+          "target": {
+            "type": "ecs-ec2",
+            "clusterInstanceSize": "t3a.small",
+            "clusterMinInstances": 1,
+            "clusterMaxInstances": 4
+          },
+          "buildType": "docker",
+          "cpu": 1,
+          "gpu": 0,
+          "memory": 1,
+          "containerInsights": false,
+          "minInstances": 1,
+          "maxInstances": 8,
+          "versionHistoryCount": 10,
+          "basePath": ".",
+          "dockerfilePath": "Dockerfile",
+          "dockerContext": ".",
+          "envVariables": {},
+          "autoscaling": {
+            "cpuThreshold": 70,
+            "memoryThreshold": 70,
+            "cooldownTimerSecs": 300,
+            "requestsPerTarget": 500
+          },
+          "includeEnvVariablesInBuild": true,
+          "healthCheckPath": "/v1/liveness",
+          "port": 8080,
+          "enableCloudfrontSwr": false,
+          "type": "web"
+        }
+      ]
+    },
+    {
+      "id": "ap-east-1",
+      "name": "ap-east-1",
+      "region": "ap-east-1",
+      "source": {
+        "branch": "main",
+        "pr": false,
+        "trigger": "push"
+      },
+      "services": [
+        {
+          "id": "api",
+          "name": "API",
+          "target": {
+            "type": "ecs-ec2",
+            "clusterInstanceSize": "t3a.small",
+            "clusterMinInstances": 1,
+            "clusterMaxInstances": 4
+          },
+          "buildType": "docker",
+          "cpu": 1,
+          "gpu": 0,
+          "memory": 1,
+          "containerInsights": false,
+          "minInstances": 1,
+          "maxInstances": 8,
+          "versionHistoryCount": 10,
+          "basePath": ".",
+          "dockerfilePath": "Dockerfile",
+          "dockerContext": ".",
+          "envVariables": {},
+          "autoscaling": {
+            "cpuThreshold": 70,
+            "memoryThreshold": 70,
+            "cooldownTimerSecs": 300,
+            "requestsPerTarget": 500
+          },
+          "includeEnvVariablesInBuild": true,
+          "healthCheckPath": "/v1/liveness",
+          "port": 8080,
+          "enableCloudfrontSwr": false,
+          "type": "web"
+        }
+      ]
+    },
+    {
       "id": "ap-southeast-1",
       "name": "ap-southeast-1",
       "region": "ap-southeast-1",
