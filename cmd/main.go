@@ -25,6 +25,8 @@ func main() {
 
 	logger := logging.New(logConfig)
 
+	logger.Info().Strs("env", os.Environ()).Msg("Environment variables")
+
 	http.HandleFunc("/v1/liveness", func(w http.ResponseWriter, r *http.Request) {
 		logger.Info().Str("path", r.URL.Path).Str("userAgent", r.UserAgent()).Msg("Liveness check")
 		_, err := w.Write([]byte(fmt.Sprintf("%d", time.Now().UnixMilli())))
