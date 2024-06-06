@@ -16,9 +16,9 @@
           "name": "API",
           "target": {
             "type": "ecs-ec2",
-            "clusterInstanceSize": "t3a.small",
+            "clusterInstanceSize": "t3.small",
             "clusterMinInstances": 1,
-            "clusterMaxInstances": 4
+            "clusterMaxInstances": 8
           },
           "buildType": "docker",
           "cpu": 1,
@@ -36,7 +36,7 @@
             "cpuThreshold": 70,
             "memoryThreshold": 70,
             "cooldownTimerSecs": 300,
-            "requestsPerTarget": 500
+            "requestsPerTarget": 2000
           },
           "includeEnvVariablesInBuild": true,
           "healthCheckPath": "/v1/liveness",
@@ -61,9 +61,9 @@
           "name": "API",
           "target": {
             "type": "ecs-ec2",
-            "clusterInstanceSize": "t3a.small",
+            "clusterInstanceSize": "t3.small",
             "clusterMinInstances": 1,
-            "clusterMaxInstances": 4
+            "clusterMaxInstances": 8
           },
           "buildType": "docker",
           "cpu": 1,
@@ -81,7 +81,7 @@
             "cpuThreshold": 70,
             "memoryThreshold": 70,
             "cooldownTimerSecs": 300,
-            "requestsPerTarget": 500
+            "requestsPerTarget": 2000
           },
           "includeEnvVariablesInBuild": true,
           "healthCheckPath": "/v1/liveness",
@@ -106,9 +106,9 @@
           "name": "API",
           "target": {
             "type": "ecs-ec2",
-            "clusterInstanceSize": "t3a.small",
+            "clusterInstanceSize": "t3.small",
             "clusterMinInstances": 1,
-            "clusterMaxInstances": 4
+            "clusterMaxInstances": 8
           },
           "buildType": "docker",
           "cpu": 1,
@@ -126,7 +126,7 @@
             "cpuThreshold": 70,
             "memoryThreshold": 70,
             "cooldownTimerSecs": 300,
-            "requestsPerTarget": 500
+            "requestsPerTarget": 2000
           },
           "includeEnvVariablesInBuild": true,
           "healthCheckPath": "/v1/liveness",
@@ -151,9 +151,9 @@
           "name": "API",
           "target": {
             "type": "ecs-ec2",
-            "clusterInstanceSize": "t3a.small",
+            "clusterInstanceSize": "t3.small",
             "clusterMinInstances": 1,
-            "clusterMaxInstances": 4
+            "clusterMaxInstances": 8
           },
           "buildType": "docker",
           "cpu": 1,
@@ -171,7 +171,7 @@
             "cpuThreshold": 70,
             "memoryThreshold": 70,
             "cooldownTimerSecs": 300,
-            "requestsPerTarget": 500
+            "requestsPerTarget": 2000
           },
           "includeEnvVariablesInBuild": true,
           "healthCheckPath": "/v1/liveness",
@@ -196,9 +196,9 @@
           "name": "API",
           "target": {
             "type": "ecs-ec2",
-            "clusterInstanceSize": "t3a.small",
+            "clusterInstanceSize": "t3.small",
             "clusterMinInstances": 1,
-            "clusterMaxInstances": 4
+            "clusterMaxInstances": 8
           },
           "buildType": "docker",
           "cpu": 1,
@@ -216,7 +216,7 @@
             "cpuThreshold": 70,
             "memoryThreshold": 70,
             "cooldownTimerSecs": 300,
-            "requestsPerTarget": 500
+            "requestsPerTarget": 2000
           },
           "includeEnvVariablesInBuild": true,
           "healthCheckPath": "/v1/liveness",
@@ -241,9 +241,9 @@
           "name": "API",
           "target": {
             "type": "ecs-ec2",
-            "clusterInstanceSize": "t3a.small",
+            "clusterInstanceSize": "t3.small",
             "clusterMinInstances": 1,
-            "clusterMaxInstances": 4
+            "clusterMaxInstances": 8
           },
           "buildType": "docker",
           "cpu": 1,
@@ -261,7 +261,7 @@
             "cpuThreshold": 70,
             "memoryThreshold": 70,
             "cooldownTimerSecs": 300,
-            "requestsPerTarget": 500
+            "requestsPerTarget": 2000
           },
           "includeEnvVariablesInBuild": true,
           "healthCheckPath": "/v1/liveness",
@@ -286,9 +286,9 @@
           "name": "API",
           "target": {
             "type": "ecs-ec2",
-            "clusterInstanceSize": "t3a.small",
+            "clusterInstanceSize": "t3.small",
             "clusterMinInstances": 1,
-            "clusterMaxInstances": 4
+            "clusterMaxInstances": 8
           },
           "buildType": "docker",
           "cpu": 1,
@@ -306,7 +306,7 @@
             "cpuThreshold": 70,
             "memoryThreshold": 70,
             "cooldownTimerSecs": 300,
-            "requestsPerTarget": 500
+            "requestsPerTarget": 2000
           },
           "includeEnvVariablesInBuild": true,
           "healthCheckPath": "/v1/liveness",
@@ -331,9 +331,9 @@
           "name": "API",
           "target": {
             "type": "ecs-ec2",
-            "clusterInstanceSize": "t3a.small",
+            "clusterInstanceSize": "t3.small",
             "clusterMinInstances": 1,
-            "clusterMaxInstances": 4
+            "clusterMaxInstances": 8
           },
           "buildType": "docker",
           "cpu": 1,
@@ -351,7 +351,7 @@
             "cpuThreshold": 70,
             "memoryThreshold": 70,
             "cooldownTimerSecs": 300,
-            "requestsPerTarget": 500
+            "requestsPerTarget": 2000
           },
           "includeEnvVariablesInBuild": true,
           "healthCheckPath": "/v1/liveness",
@@ -376,9 +376,9 @@
           "name": "API",
           "target": {
             "type": "ecs-ec2",
-            "clusterInstanceSize": "t3a.small",
+            "clusterInstanceSize": "t3.small",
             "clusterMinInstances": 1,
-            "clusterMaxInstances": 4
+            "clusterMaxInstances": 8
           },
           "buildType": "docker",
           "cpu": 1,
@@ -396,7 +396,7 @@
             "cpuThreshold": 70,
             "memoryThreshold": 70,
             "cooldownTimerSecs": 300,
-            "requestsPerTarget": 500
+            "requestsPerTarget": 2000
           },
           "includeEnvVariablesInBuild": true,
           "healthCheckPath": "/v1/liveness",
