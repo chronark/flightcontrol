@@ -29,6 +29,11 @@ func main() {
 	})
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Println()
+		fmt.Println()
+		for line := range os.Environ() {
+			fmt.Printf(" >> %s\n", line)
+		}
 
 		w.Write([]byte("ok"))
 	})
