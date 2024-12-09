@@ -1,20 +1,18 @@
-# use the official Bun image
-# see all versions at https://hub.docker.com/r/oven/bun/tags
-FROM golang:1.22 as builder
-WORKDIR /usr/src/app
+FROM golang:1.23-alpine AS builder
+
+
+
+WORKDIR /go/src/github.com/unkeyed/unkey/apps/apprunner
+COPY go.mod ./
+# COPY go.sum ./
+# RUN go mod download
 
 COPY . .
-RUN go mod tidy
-RUN go build  -o main ./cmd/main.go
-
-# run the app
+RUN go build -o bin/apprunner ./main.go
 
 
-FROM golang:1.22
-WORKDIR /usr/src/app
-COPY --from=builder /usr/src/app/main ./main
+FROM golang:1.23-alpine
+WORKDIR  /usr/local/bin
+COPY --from=builder /go/src/github.com/unkeyed/unkey/apps/apprunner/bin/apprunner .
 
-ARG PORT
-EXPOSE ${PORT:-8080}
-
-ENTRYPOINT [ "./main" ]
+CMD [ "/usr/local/bin/apprunner"]
